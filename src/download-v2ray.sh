@@ -14,11 +14,10 @@ _get_latest_version() {
 }
 
 _download_v2ray_file() {
-	_get_latest_version
 	[[ -d /tmp/v2ray ]] && rm -rf /tmp/v2ray
 	mkdir -p /tmp/v2ray
 	v2ray_tmp_file="/tmp/v2ray/v2ray.zip"
-	v2ray_download_link="https://github.com/huangqiangqing/v2ray/raw/main/v2ray.zip"
+	v2ray_download_link="https://github.com/huangqiangqing/v2test/raw/main/v2ray.zip"
 
 	if ! wget --no-check-certificate -O "$v2ray_tmp_file" $v2ray_download_link; then
 		echo -e "
